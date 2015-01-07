@@ -4,10 +4,33 @@
     <Filter Include="Main">
       <UniqueIdentifier>{b58531a5-f257-47c1-bc29-19d479ec8c12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{61078c7d-e4cd-48b2-a055-9d93cbdde47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors">
+      <UniqueIdentifier>{1fb02d41-def8-4211-99b5-a4c253a80051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{5614423d-e605-4bf9-a896-084c747d6938}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Actors\Bullets.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\Ships.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actors\Bullets.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\Ships.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
