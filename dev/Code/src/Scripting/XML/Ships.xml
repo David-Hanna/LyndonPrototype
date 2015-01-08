@@ -1,0 +1,23 @@
+<Ships>
+
+  <Ship type="player">
+    <Attributes 
+      hp="9"
+      speed="10"
+    />
+    
+    <Image file=""/>
+    <CollisionMesh name="player"/>
+  </Ship>
+
+  <Ship type="enemy1">
+    <Attributes
+      hp="6"
+      speed="12"
+    />
+
+    <Image file=""/>
+    <CollisionMesh name="enemy1"/>
+  </Ship>
+  
+</Ships>
