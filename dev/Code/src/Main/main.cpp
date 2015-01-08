@@ -3,7 +3,7 @@
 
 int main(int argc, void** argv)
 {
-	std::cout << "Hello, World!" << std::endl;
+	std::cout << "Hello Again, World!" << std::endl;
 	system("pause");
 	return 0;
 }
