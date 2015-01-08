@@ -73,15 +73,14 @@ $RECYCLE.BIN/
 *.lnk
 dev/Code/src/LyndonPrototype.v11.suo
 dev/Code/src/LyndonPrototype.sdf
+dev/Code/src/LyndonPrototype.opensdf
 dev/Build/Win32Debug/LyndonPrototypeWin32Debug.ilk
 dev/Build/Win32Debug/LyndonPrototypeWin32Debug.pdb
 *.ilk
-dev/Build/Win32Debug/LyndonPrototypeWin32Debug.pdb
-dev/Code/src/LyndonPrototype.sdf
-dev/Code/src/LyndonPrototype.v11.suo
 *.tlog
 *.log
 dev/Temp/LyndonPrototypeWin32Debug/LyndonPrototype.unsuccessfulbuild
 dev/Temp/LyndonPrototypeWin32Debug/LyndonPrototype.lastbuildstate
 dev/Temp/LyndonPrototypeWin32Debug/vc110.idb
 dev/Temp/LyndonPrototypeWin32Debug/vc110.pdb
+dev/Code/src/LyndonPrototype.vcxproj.user
