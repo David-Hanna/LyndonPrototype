@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../3rdParty/SFML-2.2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../3rdParty/SFML-2.2/include;C:\Users\Owner\Projects\LyndonPrototype_VS2012\LyndonPrototype\dev\Code\3rdParty\tinyxml_2_6_2\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -70,7 +70,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../3rdParty/SFML-2.2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../3rdParty/SFML-2.2/include;C:\Users\Owner\Projects\LyndonPrototype_VS2012\LyndonPrototype\dev\Code\3rdParty\tinyxml_2_6_2\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -88,9 +88,9 @@
   <ItemGroup>
     <ClInclude Include="Actors\Bullets.h" />
     <ClInclude Include="Actors\Ships.h" />
+    <ClInclude Include="Scripting\Code\ShipParser.h" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Scripting\XML\CollisionMeshes.xml" />
     <Xml Include="Scripting\XML\Ships.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

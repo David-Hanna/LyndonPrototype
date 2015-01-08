@@ -38,12 +38,12 @@
     <ClInclude Include="Actors\Ships.h">
       <Filter>Actors</Filter>
     </ClInclude>
+    <ClInclude Include="Scripting\Code\ShipParser.h">
+      <Filter>Scripting\Code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Scripting\XML\Ships.xml">
-      <Filter>Scripting\XML</Filter>
-    </Xml>
-    <Xml Include="Scripting\XML\CollisionMeshes.xml">
       <Filter>Scripting\XML</Filter>
     </Xml>
   </ItemGroup>
