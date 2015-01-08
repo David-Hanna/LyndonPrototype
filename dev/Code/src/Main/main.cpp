@@ -4,7 +4,6 @@
 
 int main(int argc, void** argv)
 {
-
 	sf::RenderWindow window( sf::VideoMode ( 600, 600 ), "SFML WORKS!" );
 
 	while ( window.isOpen())
@@ -14,7 +13,7 @@ int main(int argc, void** argv)
 		window.display();
 	}
 
-	//std::cout << "Hello, World!" << std::endl;
+	//std::cout << "Hello Again, World!" << std::endl;
 	//system("pause");
 	return 0;
 }

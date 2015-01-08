@@ -13,6 +13,12 @@
     <Filter Include="Utilities">
       <UniqueIdentifier>{5614423d-e605-4bf9-a896-084c747d6938}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripting\XML">
+      <UniqueIdentifier>{a2c024fc-2266-428f-bcac-06ec4b48b681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting\Code">
+      <UniqueIdentifier>{f6291bac-4945-46ca-b2d2-88e5013d9468}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\main.cpp">
@@ -32,5 +38,13 @@
     <ClInclude Include="Actors\Ships.h">
       <Filter>Actors</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Scripting\XML\Ships.xml">
+      <Filter>Scripting\XML</Filter>
+    </Xml>
+    <Xml Include="Scripting\XML\CollisionMeshes.xml">
+      <Filter>Scripting\XML</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
