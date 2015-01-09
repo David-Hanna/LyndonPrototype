@@ -3,8 +3,24 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 
+#include <HEMath.h>
+
 int main(int argc, void** argv)
 {
+	// testing that engine has been hooked up properly
+	HE::BitVector16 bitVector;
+	bitVector.SetBit(3);
+	bitVector.SetBit(8);
+	bitVector.SetBit(15);
+
+	for (unsigned int i = 0; i < 16; i++)
+	{
+		if (bitVector.GetBit(i))
+			std::cout << "1" << std::endl;
+		else
+			std::cout << "0" << std::endl;
+	}
+
 	// open a window with the title SFML WORKS!
 	sf::RenderWindow window( sf::VideoMode ( 600, 600 ), "SFML WORKS!  FPS: ----" );
 	int count = 0;
