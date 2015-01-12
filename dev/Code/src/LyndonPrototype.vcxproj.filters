@@ -41,6 +41,9 @@
     <ClInclude Include="Scripting\Code\ShipParser.h">
       <Filter>Scripting\Code</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities\SHDrawable.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Scripting\XML\Ships.xml">

@@ -4,9 +4,33 @@
 #include <string>
 
 #include <HEMath.h>
+#include "../Utilities/SHDrawable.h"
+
+
+
+void fps(sf::RenderWindow& rw)
+{
+	static time_t start = time(0);
+	static time_t current;
+	static int fpsCount = 0;
+
+	current = time(0);
+		if (current - start >= 1)
+		{
+			start = current;
+			std::string str("SFML WORKS!  FPS: " + std::to_string(fpsCount));
+			rw.setTitle(str);
+			fpsCount = 0;
+		}
+		else
+		{
+			fpsCount++;
+		}
+};
 
 int main(int argc, void** argv)
 {
+	/*
 	// testing that engine has been hooked up properly
 	HE::BitVector16 bitVector;
 	bitVector.SetBit(3);
@@ -20,36 +44,25 @@ int main(int argc, void** argv)
 		else
 			std::cout << "0" << std::endl;
 	}
+	*/
 
 	// open a window with the title SFML WORKS!
 	sf::RenderWindow window( sf::VideoMode ( 600, 600 ), "SFML WORKS!  FPS: ----" );
-	int count = 0;
+	
+	SHDrawable fpo, ally1("AllyShip",200,200), enemy1("EnemyShip",200,450), player("PlayerShip",25,25);
+	fpo.setPosition(150,150);
 
-	time_t start = time(0);
-	time_t current;
 
 	while ( window.isOpen())
 	{
-		current = time(0);
-		if (current - start >= 1)
-		{
-			start = current;
-			std::string str("SFML WORKS!  FPS: " + std::to_string(count));
-			window.setTitle(str);
-			count = 0;
-		}
-		else
-		{
-			count++;
-		}
+		
+		fps(window);
 		window.clear(sf::Color::Black);
 
-		// Make and create a chircle
-		sf::CircleShape shape(50);
-		shape.setFillColor(sf::Color(100, 250, 50));
-
-		// Draw the circle onto the window
-		window.draw(shape);
+		fpo.draw(window);
+		ally1.draw(window);
+		enemy1.draw(window);
+		player.draw(window);
 
 		window.display();
 
