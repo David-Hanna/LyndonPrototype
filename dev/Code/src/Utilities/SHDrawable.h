@@ -9,7 +9,10 @@ private:
 
 	void loadSpriteFromFile(std::string textureName)
 	{
-		texture.loadFromFile("../../Assets/" + textureName + ".png");
+		if(!texture.loadFromFile("../../Assets/" + textureName + ".png"))
+		{
+			texture.loadFromFile("../../Assets/placeholder.png");
+		}
 		sprite.setTexture(texture);
 	}
 protected:
