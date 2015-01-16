@@ -30,6 +30,9 @@
     <ClCompile Include="Actors\Ships.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
+    <ClCompile Include="Utilities\InputHandler.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actors\Bullets.h">
@@ -42,6 +45,9 @@
       <Filter>Scripting\Code</Filter>
     </ClInclude>
     <ClInclude Include="Utilities\SHDrawable.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\InputHandler.h">
       <Filter>Utilities</Filter>
     </ClInclude>
   </ItemGroup>

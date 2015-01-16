@@ -80,6 +80,7 @@ namespace HE
 		void ToggleBit(const int index)		{ bits ^= (1i64 << index); }
 	};
 	
+	/*
 	class Vector2f
 	{
 	public:
@@ -388,26 +389,5 @@ namespace HE
 		Vector4f& operator += (Vector4f const *const pOther) { x += pOther->x; y += pOther->y; z += pOther->z; w += pOther->w; return (*this); }
 		Vector4f& operator -= (Vector4f const *const pOther) { x -= pOther->x; y -= pOther->y; z -= pOther->z; w -= pOther->w; return (*this); }
 	};
-
-
-	template <const unsigned int rows, const unsigned int columns>
-	class Matrix
-	{
-	private:
-		float matrix[rows][columns];
-
-	public:
-		Matrix()  { Clear(); }
-		~Matrix() {}
-
-		void Clear()
-		{
-			for (int i = 0; i < rows; i++)
-				for (int j = 0; j < columns; j++)
-					matrix[i][j] = 0;
-		}
-
-		void SetValue(unsigned int row, unsigned int column, float value) { assert(row < rows && column < columns && "Matrix out of bounds!"); matrix[row][column] = value; }
-		float GetValue(unsigned int row, unsigned int column) const { assert(row < rows && column < columns && "Matrix out of bounds!"); return matrix[row][column]; }
-	};
+	*/
 }

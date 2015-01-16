@@ -85,11 +85,13 @@
     <ClCompile Include="Actors\Bullets.cpp" />
     <ClCompile Include="Actors\Ships.cpp" />
     <ClCompile Include="Main\main.cpp" />
+    <ClCompile Include="Utilities\InputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actors\Bullets.h" />
     <ClInclude Include="Actors\Ships.h" />
     <ClInclude Include="Scripting\Code\ShipParser.h" />
+    <ClInclude Include="Utilities\InputHandler.h" />
     <ClInclude Include="Utilities\SHDrawable.h" />
   </ItemGroup>
   <ItemGroup>

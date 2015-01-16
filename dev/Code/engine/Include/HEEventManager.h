@@ -28,29 +28,25 @@ namespace HE
 	class EventData
 	{
 	protected:
-		size_t size;
-		char* eventData;
+		unsigned int senderID;
+		eEventType eventType;
+		std::string eventData;
 
 	public:
-		EventData(const size_t sizeInBytes, const char* data);
+		EventData(unsigned int id, eEventType type, std::string data);	
 		EventData(const EventData& other);
+		EventData& operator=(const EventData& otherEventData);
 
-		virtual ~EventData() { size = 0; SAFE_DELETE_ARRAY(eventData); }
-
-		size_t GetSize() const { return size; }
-
-		const char operator[](unsigned int index) const { return eventData[index]; }
-
-	private:
-		void Init(const size_t sizeInBytes) { size = sizeInBytes; eventData = new char[size]; }
-		EventData& operator=(const EventData&);
+		unsigned int GetSenderID() const { return senderID; }
+		eEventType GetType() const { return eventType; }
+		std::string GetData() const { return std::string(eventData); }
 	};
 
 	// inherit this class before registering as an event listener
 	class iEventListener
 	{
 	public:
-		virtual void OnEvent(const eEventType eventType, const EventData& eventData) = 0;
+		virtual void OnEvent(const EventData& eventData) = 0;
 	};
 
 	class EventManager : private Uncopyable
@@ -66,7 +62,7 @@ namespace HE
 		void RegisterForEvent(iEventListener* listener, eEventType eventType) { listeners[eventType].push_back(listener); }
 		void UnregisterForEvent(iEventListener* listener, eEventType eventType) { listeners[eventType].remove(listener); }
 
-		void FireEvent(const eEventType eventType, const EventData& eventData);
+		void FireEvent(const EventData& eventData);
 
 	private:
 		EventManager() {}
@@ -77,6 +73,6 @@ namespace HE
 	class EventUser : public iEventListener
 	{
 	public:
-		virtual void OnEvent(const eEventType eventType, const EventData& eventData) override;
+		virtual void OnEvent(const EventData& eventData) override;
 	};
 }

@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <glm.hpp>
 
 #include "..\Utilities\HEMath.h"
 
@@ -15,44 +16,45 @@ namespace HE
 	class Rectangle
 	{
 	protected:
-		Vector3f topLeft, topRight, bottomRight, bottomLeft;
+		glm::vec2 topLeft, topRight, bottomRight, bottomLeft;
 
 	public:
+		// equivalent to Rectangle(glm::vec2(0.0f, 1.0f), glm::vec2(1.0f, 0.0f))
 		Rectangle();
-
-		Rectangle(const Vector3f& _topLeft, const Vector3f& _bottomRight);
+		Rectangle(const glm::vec2& _topLeft, const glm::vec2& _bottomRight);
 
 		Rectangle(const Rectangle& other);
 		Rectangle& operator=(const Rectangle& other);
 
-		Vector3f TopLeft() const { Vector3f copy(topLeft); return copy; }
-		Vector3f TopRight() const { Vector3f copy(topRight); return copy; }
-		Vector3f BottomRight() const { Vector3f copy(bottomRight); return copy; }
-		Vector3f BottomLeft() const { Vector3f copy(bottomLeft); return copy; }
+		glm::vec2 TopLeft() const { glm::vec2 copy(topLeft); return copy; }
+		glm::vec2 TopRight() const { glm::vec2 copy(topRight); return copy; }
+		glm::vec2 BottomRight() const { glm::vec2 copy(bottomRight); return copy; }
+		glm::vec2 BottomLeft() const { glm::vec2 copy(bottomLeft); return copy; }
 
-		Vector3f CalculateCenter();
+		void Translate(const float x, const float y) { Translate(glm::vec2(x, y)); }
+		void Translate(const glm::vec2& term) { topLeft += term; topRight += term; bottomRight += term; bottomLeft += term; }
 
-		void Translate(const float x, const float y) { Translate(Vector2f(x, y)); }
-		void Translate(const Vector2f& term);
-		void SetOrientation(const float _orientation);
+		glm::vec2 CalculateCenter();
+
+		bool IsPointInsideRectangle(const glm::vec2& point);
 	};
 
 	class Polygon
 	{
 	protected:
-		std::vector<Vector3f> verts;
+		std::vector<glm::vec2> verts;
 
 	public:
-		Polygon(const std::vector<Vector3f> points) { assert(points.size() > 2 && "A polygon must be at least 3 points."); verts = points; }
+		Polygon(const std::vector<glm::vec2>& points) { assert(points.size() > 2 && "A polygon must be at least 3 points."); verts = points; }
 		Polygon(const Polygon& other) { InitFromOther(other); }
 		Polygon& operator=(const Polygon& other) { verts.clear(); InitFromOther(other); }
 
-		Vector3f& operator[](const unsigned int index) { return verts[index]; }
-		const Vector3f& operator[](const unsigned int index) const { return verts[index]; }
+		glm::vec2& operator[](const unsigned int index) { return verts[index]; }
+		const glm::vec2& operator[](const unsigned int index) const { return verts[index]; }
 		size_t Size() const { return verts.size(); }
 
 		bool IsPointInsidePolygon(const float x, const float y) const;
-		bool IsPointInsidePolygon(const Vector3f& point) const { return IsPointInsidePolygon(point.x, point.y); }
+		bool IsPointInsidePolygon(const glm::vec2& point) const { return IsPointInsidePolygon(point.x, point.y); }
 
 		bool IsColliding(const Polygon& other) const;
 
