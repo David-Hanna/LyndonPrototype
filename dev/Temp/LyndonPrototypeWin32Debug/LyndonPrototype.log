@@ -1,0 +1,9 @@
+﻿Build started 2015-01-12 11:24:52 AM.
+     1>Project "C:\Users\Owner\Projects\LyndonPrototype_VS2012\LyndonPrototype\dev\Code\src\LyndonPrototype.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         LyndonPrototype.vcxproj -> C:\Users\Owner\Projects\LyndonPrototype_VS2012\LyndonPrototype\dev\Code\src\..\..\Build\Win32Debug\LyndonPrototypeWin32Debug.exe
+     1>Done Building Project "C:\Users\Owner\Projects\LyndonPrototype_VS2012\LyndonPrototype\dev\Code\src\LyndonPrototype.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.29
